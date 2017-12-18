@@ -28,7 +28,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import ufo.example.kafka.DemoApplicationTests;
 import ufo.example.kafka.config.KafkaConfig;
 
-public class KafkaProducerServiceImplTest extends DemoApplicationTests {
+public class KafkaProducerServiceTest extends DemoApplicationTests {
 
 	@Autowired
 	private KafkaProducerService producer;
