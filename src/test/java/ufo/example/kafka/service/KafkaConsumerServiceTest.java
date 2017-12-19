@@ -52,7 +52,7 @@ public class KafkaConsumerServiceTest extends DemoApplicationTests {
 			consumerService.runConsumer(groupId, () -> {return done.get();}, record -> {
 				messagesReceived.getAndIncrement();
 				countDown.countDown();
-				System.out.printf("Consumer Record:(%s, %d, %s, %d, %d)\n",
+				System.out.printf("Consumer 1 Record:(%s, %d, %s, %d, %d)\n",
 						groupId, record.key(), record.value(),
 						record.partition(), record.offset());
 			});
@@ -62,7 +62,7 @@ public class KafkaConsumerServiceTest extends DemoApplicationTests {
 			consumerService.runConsumer(groupId, () -> {return done.get();}, record -> {
 				messagesReceived.getAndIncrement();
 				countDown.countDown();
-				System.out.printf("Consumer Record:(%s, %d, %s, %d, %d)\n",
+				System.out.printf("Consumer 2 Record:(%s, %d, %s, %d, %d)\n",
 						groupId, record.key(), record.value(),
 						record.partition(), record.offset());
 			});
@@ -93,7 +93,7 @@ public class KafkaConsumerServiceTest extends DemoApplicationTests {
 			consumerService.runConsumer(groupId, () -> {return done.get();}, record -> {
 				messagesReceived.getAndIncrement();
 				countDown.countDown();
-				System.out.printf("Consumer Record:(%s, %d, %s, %d, %d)\n",
+				System.out.printf("Consumer 1 Record:(%s, %d, %s, %d, %d)\n",
 						groupId, record.key(), record.value(),
 						record.partition(), record.offset());
 			});
@@ -104,7 +104,7 @@ public class KafkaConsumerServiceTest extends DemoApplicationTests {
 			consumerService.runConsumer(groupId, () -> {return done.get();}, record -> {
 				messagesReceived.getAndIncrement();
 				countDown.countDown();
-				System.out.printf("Consumer Record:(%s, %d, %s, %d, %d)\n",
+				System.out.printf("Consumer 2 Record:(%s, %d, %s, %d, %d)\n",
 						groupId, record.key(), record.value(),
 						record.partition(), record.offset());
 			});

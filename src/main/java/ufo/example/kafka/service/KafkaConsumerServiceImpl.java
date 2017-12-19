@@ -17,7 +17,6 @@ package ufo.example.kafka.service;
 
 import java.util.Collections;
 import java.util.Properties;
-import java.util.UUID;
 import java.util.concurrent.Callable;
 
 import org.apache.kafka.clients.consumer.Consumer;
@@ -36,8 +35,7 @@ public class KafkaConsumerServiceImpl implements KafkaConsumerService {
 
 	@Override
 	public void runConsumer(String groupId, Callable<Boolean> stop, java.util.function.Consumer<ConsumerRecord<Long, String>> callback) {
-		final String group = UUID.randomUUID().toString();
-		final Consumer<Long, String> consumer = KafkaConsumerServiceImpl.createConsumer(group);
+		final Consumer<Long, String> consumer = KafkaConsumerServiceImpl.createConsumer(groupId);
 		try {
 			while (!stop.call()) {
 				System.out.println("Polling for messages");
