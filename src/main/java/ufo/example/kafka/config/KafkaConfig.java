@@ -41,7 +41,7 @@ public class KafkaConfig {
     		zkClient = KafkaTopicUtils.buildZkClient(ZOOKEPER_SERVERS);
     		final ZkUtils zkUtils = KafkaTopicUtils.buildZkUtils(zkClient, ZOOKEPER_SERVERS);
     		final int noOfPartitions = 1;
-			final int noOfReplication =1;
+			final int noOfReplication = 1;
 			KafkaTopicUtils.createTopic(zkUtils, TOPIC, noOfPartitions, noOfReplication);
 			logger.debug("Topic [{}] Created", TOPIC);
     	} finally {

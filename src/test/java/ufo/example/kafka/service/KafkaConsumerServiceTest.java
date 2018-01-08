@@ -68,7 +68,7 @@ public class KafkaConsumerServiceTest extends DemoApplicationTests {
 			});
 		}).start();
 
-		Thread.sleep(1000);
+		Thread.sleep(2500);
 
 		send(howMany);
 
@@ -110,7 +110,7 @@ public class KafkaConsumerServiceTest extends DemoApplicationTests {
 			});
 		}).start();
 
-		Thread.sleep(1000);
+		Thread.sleep(2500);
 
 		send(howMany);
 
